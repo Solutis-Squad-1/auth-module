@@ -21,6 +21,14 @@ import java.util.stream.Collectors;
 @Component
 @RequiredArgsConstructor
 public class SecurityFilter extends OncePerRequestFilter {
+    /**
+     * Extracts the token from the Authorization header and sets the authentication in the SecurityContext.
+     * @param request
+     * @param response
+     * @param filterChain
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String token = getToken(request);
