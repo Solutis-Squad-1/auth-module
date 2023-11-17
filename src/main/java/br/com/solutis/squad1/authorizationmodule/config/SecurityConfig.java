@@ -33,6 +33,7 @@ public class SecurityConfig {
 
     /**
      * Disable CSRF and CORS. Sets the session management to stateless. Allow all requests to the Swagger UI and require authorization for all other requests.
+     *
      * @param http
      * @param securityFilter
      * @return SecurityFilterChain

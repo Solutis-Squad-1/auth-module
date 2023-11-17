@@ -23,6 +23,7 @@ import java.util.stream.Collectors;
 public class SecurityFilter extends OncePerRequestFilter {
     /**
      * Extracts the token from the Authorization header and sets the authentication in the SecurityContext.
+     *
      * @param request
      * @param response
      * @param filterChain
